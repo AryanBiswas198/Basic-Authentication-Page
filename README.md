@@ -19,7 +19,7 @@ This starter pack includes a basic setup for using **Tailwind CSS with React**. 
 
 1. Start the development server.
     ```sh
-    npm start
+    npm run dev
     ```
 1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
 1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
