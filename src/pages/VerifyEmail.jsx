@@ -16,7 +16,7 @@ const VerifyEmail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle OTP verification here
+    
     const { firstName, lastName, email, password, confirmPassword } =
       signupData;
 
@@ -34,12 +34,12 @@ const VerifyEmail = () => {
   };
 
   const handleResend = () => {
-    // Handle resending verification email
+    // Function to resend verification email
     dispatch(sendOtp(signupData.email, navigate));
   };
 
   const handleBackToSignup = () => {
-    // Handle navigation back to signup page
+    // Function to navigate back to signup page
   };
 
   return (

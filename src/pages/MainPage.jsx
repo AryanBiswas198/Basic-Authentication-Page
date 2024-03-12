@@ -4,7 +4,7 @@ import { logout } from "../services/operations/authAPI";
 import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
-  // Fetch user data from the auth slice
+
     const {user} = useSelector((state) => state.profile);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -21,7 +21,6 @@ const MainPage = () => {
       <p className="text-lg">
         This is your main page after successful login.
       </p>
-      {/* Add more content or components as needed */}
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
         onClick={handleLogout}

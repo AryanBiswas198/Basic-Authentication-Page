@@ -16,7 +16,6 @@ const LoginModal = ({ isOpen, onClose }) => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // Handle login logic here
     dispatch(login(data.email, data.password, navigate));
   };
 
