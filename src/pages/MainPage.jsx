@@ -14,16 +14,23 @@ const MainPage = () => {
       };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold mb-4">
+    <div className="flex flex-col items-center justify-center bg-black h-screen">
+      <h1 className="text-3xl text-white font-bold mb-4">
         Welcome, {user?.firstName} {user?.lastName}!
       </h1>
-      <p className="text-lg">
+      <p className="text-lg text-white">
         This is your main page after successful login.
       </p>
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md mt-6"
         onClick={handleLogout}
+        style={{
+              background: "linear-gradient(to right, #667EEA, #764BA2)",
+              backgroundSize: "200% auto",
+              backgroundPosition: "right center",
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundPosition = "right center"}
+            onMouseLeave={(e) => e.target.style.backgroundPosition = "left center"}
       >
         Logout
       </button>
