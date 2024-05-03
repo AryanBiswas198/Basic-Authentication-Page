@@ -1,47 +1,39 @@
 import React, { useState } from 'react';
-import LoginModal from "../components/core/LoginModal";
-import SignupModal from "../components/core/SignupModal";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showSignupModal, setShowSignupModal] = useState(false);
-
-  const openLoginModal = () => {
-    setShowLoginModal(true);
-  };
-
-  const closeLoginModal = () => {
-    setShowLoginModal(false);
-  };
-
-  const openSignupModal = () => {
-    setShowSignupModal(true);
-  };
-
-  const closeSignupModal = () => {
-    setShowSignupModal(false);
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-lg px-6 py-8 bg-white shadow-md rounded-md">
-        <h1 className="text-4xl font-bold text-center mb-8">Welcome to My Website</h1>
-        <div className="flex justify-center space-x-4">
-          <button
-            onClick={openLoginModal}
-            className="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    <div className="min-h-screen flex items-center bg-black justify-center bg-gray-100">
+      <div className="max-w-lg px-6 py-8 bg-black shadow-md rounded-md">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">Welcome to My Website</h1>
+        <div className="flex justify-center space-x-10">
+          <Link
+            to={"/loginPage"}
+            className="px-6 py-3 text-white font-semibold rounded focus:outline-none"
+            style={{
+              background: "linear-gradient(to right, #667EEA, #764BA2)",
+              backgroundSize: "200% auto",
+              backgroundPosition: "right center",
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundPosition = "right center"}
+            onMouseLeave={(e) => e.target.style.backgroundPosition = "left center"}
           >
             Login
-          </button>
-          <button
-            onClick={openSignupModal}
-            className="px-6 py-3 bg-yellow-100 text-white font-semibold rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+          </Link>
+          <Link
+            to={"/signupPage"}
+            className="px-6 py-3 text-white font-semibold rounded focus:outline-none"
+            style={{
+              background: "linear-gradient(to right, #667EEA, #764BA2)",
+              backgroundSize: "200% auto",
+              backgroundPosition: "right center",
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundPosition = "right center"}
+            onMouseLeave={(e) => e.target.style.backgroundPosition = "left center"}
           >
             Signup
-          </button>
+          </Link>
         </div>
-        <LoginModal isOpen={showLoginModal} onClose={closeLoginModal} />
-        <SignupModal isOpen={showSignupModal} onClose={closeSignupModal} />
       </div>
     </div>
   );
